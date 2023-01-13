@@ -9,11 +9,9 @@
 <body>
 
 Names: <span id="names"></span>
-Emails: <span id="emails"></span>
 
 <script type="text/javascript">
 var name = document.getElementsByTagName("body")[0];
-var email = document.getElementsByTagName("body")[1];
 
 function updater() {
   fetch('/data')
@@ -21,7 +19,7 @@ function updater() {
   .then(text => (names.innerHTML = text));  // update page with new data
 }
 
-setInterval(updater, 2000);  // run `updater()` every 1000ms (1s)
+setInterval(updater, 2000);  // updater() runs every 2 seconds
 </script>
 
 </body>

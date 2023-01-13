@@ -16,6 +16,5 @@ def calculate_position():
         except IndexError:
             return None
 
-    print(coordinate_list)
     return coordinate_list
 

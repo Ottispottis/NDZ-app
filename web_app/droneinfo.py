@@ -17,4 +17,7 @@ def y_coordinate():
     return y
 
 
+def snapshot_time():
+    snapshot = parse_drone('@snapshotTimestamp')
+    return snapshot
 

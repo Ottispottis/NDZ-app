@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from writeinfotojson import write_to_file, check
+from writeinfotojson import check
 import datetime
 
 app = Flask(__name__)
@@ -13,8 +13,8 @@ def birdnest():
 @app.route('/data')
 def data():
     """send current content"""
-    check()
-    return "names[0], emails[0]"
+    table = check()
+    return table
 
 
 if __name__ == "__main__":

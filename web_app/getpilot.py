@@ -1,6 +1,6 @@
 import urllib3
 from urllib.error import HTTPError
-from droneinfo import serial_numbers
+from droneinfo import serial_numbers, snapshot_time
 from droneposition import calculate_position
 import json
 
@@ -17,20 +17,23 @@ def get_pilots():
     http = urllib3.PoolManager()
     positions = calculate_position()
     positions_under_radius = []
+    snapshot = snapshot_time()
 
-    for i in range(len(serial_n)):
-        if positions[i] < radius:
-            try:
-                response = http.request('GET', URL+serial_n[i]).data
-                # Response is byte data. Simply decoding it so it becomes dictionary data type.
-                response = json.loads(response.decode('utf-8'))
-                pilot_list.append(response)
-                positions_under_radius.append(positions[i])
-            except HTTPError as e:
-                if e.code == 404:
-                    continue
+    if positions:
+        for i in range(len(serial_n)):
+            if positions[i] < radius:
+                try:
+                    response = http.request('GET', URL+serial_n[i]).data
+                    # Response is byte data. Simply decoding it so it becomes dictionary data type.
+                    response = json.loads(response.decode('utf-8'))
+                    pilot_list.append(response)
+                    positions_under_radius.append(positions[i])
+                except HTTPError as e:
+                    if e.code == 404:
+                        continue
 
-    if not pilot_list:
-        return None, None
-    else:
-        return pilot_list, positions_under_radius
+        if not pilot_list:
+            return None, None, None
+        else:
+            return pilot_list, positions_under_radius, snapshot
+    return None, None, None
