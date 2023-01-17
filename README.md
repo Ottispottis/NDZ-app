@@ -32,8 +32,11 @@ Prerequisites:
 - Python 3.8 or newer
 
 - Install packages listed in requirements.txt
+```
+pip install -r requirements.txt
+```
 
-- a Modern browser that supports Fetch
+- a Modern browser that supports Fetch, a list of browsers that support it can be found here -> https://caniuse.com/mdn-api_fetch
 
 NOTE: requirements.txt is configured so that it is compatible with Google Cloud, for running locally NumPy 1.24.0 is recommended
 
@@ -41,7 +44,7 @@ Running:
 
 1. Prerequisites
 2. Open CLI and navigate to web_app directory
-3. Run Flask --app main.py in your CLI
+3. Run ```Flask --app main.py``` in your CLI
 4. Navigate to http://127.0.0.1:5000 on your browser
 5. Chart should start filling up with pilot information :)
 
