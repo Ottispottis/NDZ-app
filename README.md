@@ -20,12 +20,18 @@ Link to assignment description: https://assignments.reaktor.com/birdnest/
 This Python program gathers and parses all the required information and renders it as a web page using Flask.
 
 All the information is automatically collected, updated, and displayed to the user as a chart.
+
+After 10 minutes from the last violation, pilot gets removed from the list. 
+
+If a pilot violates the NDZ again before 10 minutes has passed from the last recorded violation, the time of the violation gets updated.
+
+Position only gets updated when the new position is closer than the previous one.
 # Running locally
 Prerequisites:
 
 - Python 3.8 or newer
 
-- packages listed in requirements.txt
+- Install packages listed in requirements.txt
 
 - a Modern browser that supports Fetch
 
