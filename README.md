@@ -27,6 +27,6 @@ Due to free hosting, the chart won't be populated unless someone has recently vi
 
 Improvements that I would do to increase performance and improve UX:
 
-- Using a data base for storing the pilot information - currently reading and writing is done from a JSON file which works fine for demonstrating, but using something like SQL would be preferable. Unfortunately I didn't have the time to implement that yet.
+- Using a database for storing the pilot information - currently reading and writing is done from a JSON file which works fine for demonstrating, but using something like SQL would be preferable. Unfortunately I didn't have the time to implement that yet.
 - Modern UI
 - Allow sorting of the chart in different orders: time, position etc.
