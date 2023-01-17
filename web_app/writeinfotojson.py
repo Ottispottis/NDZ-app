@@ -6,12 +6,19 @@ from datetime import datetime
 
 
 def check_if_file_empty():
-    with open("pilot.json", "r") as f:
-        check_char = f.read(1)
-        f.close()
-        if check_char:
-            return True
-        else:
+    # Checks if file exists and is empty.
+    try:
+        with open("pilot.json", "r") as f:
+            check_char = f.read(1)
+            f.close()
+            if check_char:
+                return True
+            else:
+                return False
+    # If file does not exist create it.
+    except IOError:
+        with open("pilot.json", "w+") as f:
+            f.close()
             return False
 
 
