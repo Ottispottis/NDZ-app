@@ -24,3 +24,9 @@ I recommend using Python 3.8 => if you want to try running this locally on your 
 At the time of writing a functional version of this app has been deployed on Google Cloud: https://reaktor-ndz-app.ew.r.appspot.com/
 
 Due to free hosting, the chart won't be populated unless someone has recently viewed the web app.
+
+Improvements that I would do to increase performance and improve UX:
+
+- Using a data base for storing the pilot information - currently reading and writing is done from a JSON file which works fine for demonstrating, but using something like SQL would be preferable. Unfortunately I didn't have the time to implement that yet.
+- Modern UI
+- Allow sorting of the chart in different orders: time, position etc.
