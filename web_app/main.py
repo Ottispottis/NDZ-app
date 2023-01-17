@@ -1,6 +1,5 @@
 from flask import Flask, render_template
-from writeinfotojson import check_data_and_write
-import datetime
+from writecontent import check_data_and_write
 
 app = Flask(__name__)
 

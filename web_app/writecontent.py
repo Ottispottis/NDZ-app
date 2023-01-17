@@ -67,7 +67,7 @@ def check_data_and_write():
             df.loc[index_of_name[0], 'Position'] = pilot_dict_list[i]['Position']
             df.loc[index_of_name[0], 'Time'] = pilot_dict_list[i]['Time'][0]
     # If there is no data in the dataframe return only the columns as HTML.
-    # Otherwise, save the dataframe as a JSON file and return a HTML representation of it.
+    # Otherwise, save the dataframe as a JSON file and return an HTML representation of it.
     if df.empty:
         return df.to_html()
     else:

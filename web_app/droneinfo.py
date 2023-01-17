@@ -1,6 +1,7 @@
 from parsedronedata import parse_drone
 
 
+# All functions return specific information about a drone
 def serial_numbers():
     serials = parse_drone('serialNumber')
     return serials

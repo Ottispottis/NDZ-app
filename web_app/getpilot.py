@@ -7,7 +7,7 @@ import json
 URL = 'https://assignments.reaktor.com/birdnest/pilots/'
 
 
-# First checks if NDZ was breached by comparing the positions given by calculate_postition() to the radius.
+# First checks if NDZ was breached by comparing the positions given by calculate_position() to the radius.
 # If position is smaller than radius, NDZ has been breached and the information of the pilot is queried
 def get_pilots():
 
