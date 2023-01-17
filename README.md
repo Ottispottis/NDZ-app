@@ -3,6 +3,8 @@
 The pre-assignment for Reaktor's summer trainee position was a web application that would display the information of pilots who violated the "No drone zone" set around 
 the nest of a rare bird breed "Monadikuikka".
 
+Link to assignment description: https://assignments.reaktor.com/birdnest/
+
 # Requirements
 
 - Persist the pilot information for 10 minutes since their drone was last seen by the equipment
@@ -19,9 +21,24 @@ This Python program gathers and parses all the required information and renders 
 
 All the information is automatically collected, updated, and displayed to the user as a chart.
 # Running locally
-I recommend using Python 3.8 => if you want to try running this locally on your own machine.
+Prerequisites:
+
+- Python 3.8 or newer
+
+- packages listed in requirements.txt
+
+- a Modern browser that supports Fetch
 
 NOTE: requirements.txt is configured so that it is compatible with Google Cloud, for running locally NumPy 1.24.0 is recommended
+
+Running:
+
+1. Prerequisites
+2. Open CLI and navigate to web_app directory
+3. Run Flask --app main.py in your CLI
+4. Navigate to http://127.0.0.1:5000 on your browser
+5. Chart should start filling up with pilot information :)
+
 # Live version
 At the time of writing a functional version of this app has been deployed on Google Cloud: https://reaktor-ndz-app.ew.r.appspot.com/
 
