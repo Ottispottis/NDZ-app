@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from writeinfotojson import check
+from writeinfotojson import check_data_and_write
 import datetime
 
 app = Flask(__name__)
@@ -12,10 +12,10 @@ def birdnest():
 
 @app.route('/data')
 def data():
-    """send current content"""
-    table = check()
+    # Sends an HTML table containing the information of pilots who violated the NDZ.
+    table = check_data_and_write()
     return table
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)

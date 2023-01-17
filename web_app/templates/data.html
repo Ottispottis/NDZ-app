@@ -6,9 +6,9 @@
 <title>Test</title>
 </head>
 
-<body>
-
-Names: <span id="names"></span>
+<body style="background-color:#a28089;">
+<h1 style="font-family:verdana;">  Pilots who violated the NDZ </h1>
+<span id="content"></span>
 
 <script type="text/javascript">
 var name = document.getElementsByTagName("body")[0];
@@ -16,10 +16,10 @@ var name = document.getElementsByTagName("body")[0];
 function updater() {
   fetch('/data')
   .then(response => response.text())
-  .then(text => (names.innerHTML = text));  // update page with new data
+  .then(text => (content.innerHTML = text));  // update page with new data
 }
 
-setInterval(updater, 2000);  // updater() runs every 2 seconds
+setInterval(updater, 1000);  // updater() runs every second
 </script>
 
 </body>

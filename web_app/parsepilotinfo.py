@@ -1,13 +1,13 @@
 from getpilot import get_pilots
-from gettime import current_time
 
 
 def parse_pilot_info():
 
     pilots, positions, snapshot = get_pilots()
     pilot_dict_list = []
-
+    # Checks if pilots is not empty.
     if pilots:
+        # Loops through every entry in pilots and adds gathered information to a list of dictionaries
         for pilot in range(len(pilots)):
             temp_dict = {}
             full_name = (pilots[pilot]['firstName']) + ' ' + (pilots[pilot]['lastName'])

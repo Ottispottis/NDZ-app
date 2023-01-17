@@ -3,7 +3,6 @@ from parsedronedata import parse_drone
 
 def serial_numbers():
     serials = parse_drone('serialNumber')
-    print(serials)
     return serials
 
 
