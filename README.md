@@ -49,7 +49,7 @@ Running:
 5. Chart should start filling up with pilot information :)
 
 # Live version
-At the time of writing a functional version of this app has been deployed on Google Cloud: https://reaktor-ndz-app.ew.r.appspot.com/
+At the time of writing a functional version of this app has been deployed on Google Cloud: https://ndz-app-reaktor.ew.r.appspot.com/
 
 Due to free hosting, the chart won't be populated unless someone has recently viewed the web app.
 
